@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem "sorcery"
 gem "jwt"
+gem "gentelella-rails"
+gem "jquery-rails"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
