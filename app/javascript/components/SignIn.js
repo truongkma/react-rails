@@ -8,7 +8,7 @@ class SignIn extends React.Component {
           <div class="animate form login_form">
             <section class="login_content">
               <form>
-                <h1>Login Form</h1>
+                <h1>Login</h1>
                 <div>
                   <input type="text" class="form-control" placeholder="Username" required="" />
                 </div>
