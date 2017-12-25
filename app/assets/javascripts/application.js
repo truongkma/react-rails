@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require jquery3
-//= require popper
 //= require bootstrap
 //= require metisMenu/jquery.metisMenu.js
 //= require pace/pace.min.js
