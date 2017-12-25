@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery/jquery-3.2.1.min.js
 //= require rails-ujs
 //= require bootstrap
 //= require metisMenu/jquery.metisMenu.js
