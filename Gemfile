@@ -38,6 +38,7 @@ gem "jquery-rails"
 gem "sorcery"
 gem "jwt"
 gem "foreman"
+gem "slim-rails"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
