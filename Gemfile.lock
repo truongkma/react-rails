@@ -81,6 +81,12 @@ GEM
     connection_pool (2.2.1)
     crass (1.0.3)
     debug_inspector (0.0.3)
+    devise (4.3.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.2)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.3)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
@@ -93,14 +99,11 @@ GEM
     factory_bot_rails (4.8.2)
       factory_bot (~> 4.8.2)
       railties (>= 3.0.0)
-    faraday (0.12.2)
-      multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
-    foreman (0.63.0)
-      dotenv (>= 0.7)
-      thor (>= 0.13.6)
+    foreman (0.84.0)
+      thor (~> 0.19.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.9.1)
@@ -112,7 +115,6 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    jwt (1.5.6)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -127,19 +129,11 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     multi_json (1.12.2)
-    multi_xml (0.6.0)
-    multipart-post (2.0.0)
     mysql2 (0.4.10)
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    oauth (0.5.4)
-    oauth2 (1.4.0)
-      faraday (>= 0.8, < 0.13)
-      jwt (~> 1.0)
-      multi_json (~> 1.3)
-      multi_xml (~> 0.5)
-      rack (>= 1.2, < 3)
+    orm_adapter (0.5.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -185,6 +179,9 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rspec-core (3.7.0)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -221,10 +218,13 @@ GEM
     selenium-webdriver (3.8.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
-    sorcery (0.11.0)
-      bcrypt (~> 3.1)
-      oauth (~> 0.4, >= 0.4.4)
-      oauth2 (~> 1.0, >= 0.8.0)
+    slim (3.0.9)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 1.3.3, < 2.1)
+    slim-rails (3.1.3)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      slim (~> 3.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -237,13 +237,16 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    thor (0.20.0)
+    temple (0.8.0)
+    thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.8)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
     uglifier (4.0.2)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -269,13 +272,13 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  devise
   dotenv-rails
   factory_bot_rails
   font-awesome-rails
   foreman
   jbuilder (~> 2.5)
   jquery-rails
-  jwt
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.3.18, < 0.5)
   pry-rails
@@ -286,7 +289,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
-  sorcery
+  slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

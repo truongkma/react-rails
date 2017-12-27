@@ -35,9 +35,9 @@ gem 'jbuilder', '~> 2.5'
 gem "bootstrap-sass"
 gem "font-awesome-rails"
 gem "jquery-rails"
-gem "sorcery"
-gem "jwt"
+gem "devise"
 gem "foreman"
+gem "slim-rails"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
