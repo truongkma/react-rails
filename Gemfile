@@ -34,7 +34,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem "bootstrap-sass"
 gem "font-awesome-rails"
-gem "jquery-rails"
 gem "devise"
 gem "foreman"
 gem "slim-rails"
