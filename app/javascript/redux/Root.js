@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
-import {Router, Route} from 'react-router';
+import {Route, Router} from 'react-router';
+import createBrowserHistory from 'history/createBrowserHistory';
 import {syncHistoryWithStore} from 'react-router-redux';
 import rootReducer from './reducers/root_reducer';
 import {App} from './containers'
@@ -15,12 +16,14 @@ class Root extends React.Component {
   }
   render () {
     const store = createStore(rootReducer);
+    const history = syncHistoryWithStore(createBrowserHistory(), store);
     UserAction.setCurrentUser(store, this.props.current_user)
     return (
-      <div>
-        <App />
-        <h2>OK</h2>
-      </div>
+      <Provider store={store}>
+        <Router history={history}>
+          <Route path='/' component={App} />
+        </Router>
+      </Provider>
     );
   }
 }

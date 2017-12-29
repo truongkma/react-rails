@@ -1,17 +1,19 @@
-'use strict';
+import React from "react"
+import PropTypes from "prop-types"
 
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-
-export default class Footer extends Component {
-  render() {
+class Footer extends React.Component {
+  render () {
     return (
       <div className="footer">
         <div className="pull-right">
-          <p>Nguyen Dac Truong</p>
+          Nguyen Dac Truong
         </div>
-        <strong>Copyright</strong> TruongKMA &copy; 2017-2018
+        <div>
+          <strong>Copyright</strong> &copy; TruongKMA 2017-2018
+        </div>
       </div>
     );
   }
 }
+
+export default Footer

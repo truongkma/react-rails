@@ -24,7 +24,7 @@ const Utils = {
       });
   },
 
-  generateUrlLazada() {
+  generateUrlLazada(user, action) {
     let data = {
       UserID: user.lazada_user_id,
       Version: '1.0',
