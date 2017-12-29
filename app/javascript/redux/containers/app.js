@@ -11,7 +11,6 @@ export default class App extends Component {
         <Navigation />
         <div id='page-wrapper' className='gray-bg'>
           <Topnavbar />
-          {console.log(this.props.children)}
           {this.props.children}
           <Footer />
         </div>

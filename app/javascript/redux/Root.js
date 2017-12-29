@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
-import {syncHistoryWithStore} from 'react-router-redux';
 import rootReducer from './reducers/root_reducer';
 import {App, Products, About} from './containers'
 import Utils from './lib/utils'
