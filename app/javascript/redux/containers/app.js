@@ -11,10 +11,15 @@ export default class App extends Component {
         <Navigation />
         <div id='page-wrapper' className='gray-bg'>
           <Topnavbar />
-          <h3>Nguyen Dac Truong</h3>
+          {console.log(this.props.children)}
+          {this.props.children}
           <Footer />
         </div>
       </div>
     );
   }
 }
+
+App.propTypes = {
+  children: PropTypes.object
+};
