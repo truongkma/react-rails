@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 20171227025739) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "lazada_user_id"
+    t.string "lazada_api_key"
+    t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

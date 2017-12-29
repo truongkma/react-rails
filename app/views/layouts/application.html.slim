@@ -13,9 +13,4 @@ html
 
   body
     = javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js")
-    #wrapper class="#{params[:controller]}.#{params[:action]}"
-      = render "layouts/navigation"
-      #page-wrapper.gray-bg
-        = render "layouts/topnavbar"
-        = yield
-        = render "layouts/footer"
+    = yield
